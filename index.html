@@ -1,63 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>For You ❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
 <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
 <!-- OTP SCREEN -->
 <div id="lockScreen" class="lock-screen">
-
   <h2>🔐 Private Access</h2>
-
   <input type="text" id="otpInput" placeholder="Enter OTP">
-
   <button onclick="checkOTP()">Unlock</button>
-
   <p id="otpError"></p>
-
   <button onclick="generateOTP()">Send OTP</button>
-
   <p id="otpInfo"></p>
-
 </div>
-
 
 <!-- MAIN SITE -->
 <div id="mainSite">
-
 <audio id="bgMusic" loop>
   <source src="GehraHua.mp3" type="audio/mpeg">
 </audio>
-
 
 <div class="music-btn">
   <button onclick="toggleMusic()">🎵 Play / Pause</button>
 </div>
 
-
 <div class="container">
-
 <div class="slider" id="slider">
-
 
 <!-- SLIDE 1 -->
 <section class="slide one">
 <h1>Hey My LOVE ❤️</h1>
 <p>Swipe →</p>
 </section>
-
 
 <!-- SLIDE 2 -->
 <section class="slide two">
@@ -69,7 +51,6 @@ And I just want to be with you always.
 </p>
 </section>
 
-
 <!-- SLIDE 3 -->
 <section class="slide three">
 <h2>Why You?</h2>
@@ -79,7 +60,6 @@ You make me better every day.
 </p>
 </section>
 
-
 <!-- SLIDE 4 -->
 <section class="slide four">
 <h2>My Feelings</h2>
@@ -88,64 +68,41 @@ Pure.<br>True.<br>Respectful.
 </p>
 </section>
 
-
 <!-- SLIDE 5 : COUNTDOWN -->
 <section class="slide countdown">
-
 <h2>Since I Met You ❤️</h2>
-
 <p id="countdown"></p>
-
 <p class="date-info">Date: DD-MM-YYYY</p>
-
 </section>
-
 
 <!-- SLIDE 6 : GALLERY -->
 <section class="slide gallery">
-
 <h2>Our Memories 💖</h2>
-
 <div class="gallery-box">
-
 <img src="images/pic1.jpg">
 <img src="images/pic2.jpg">
 <img src="images/pic3.jpg">
-
 </div>
-
 </section>
-
 
 <!-- SLIDE 7 -->
 <section class="slide five">
-
 <h2>One Question 💫</h2>
-
 <button onclick="openPopup('YES')">Yes 🌸</button>
-<button onclick="openPopup('NO')">No 🙂</button>
-
+<button id="noBtn">No 🙂</button>
 </section>
 
-
 </div>
 </div>
 </div>
-
 
 <!-- MESSAGE POPUP -->
 <div id="popup" class="popup">
-
 <h3>Your Message 💌</h3>
-
 <textarea id="userMsg" placeholder="Write something..."></textarea>
-
 <button onclick="sendResponse()">Send ❤️</button>
-
 </div>
 
-
 <script src="script.js"></script>
-
 </body>
 </html>

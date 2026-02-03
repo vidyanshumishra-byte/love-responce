@@ -10,22 +10,18 @@ overflow:hidden;
 background:black;
 }
 
-
 /* OTP SCREEN */
-
 .lock-screen{
 position:fixed;
 width:100%;
 height:100%;
 background:linear-gradient(#141e30,#243b55);
 color:white;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 gap:15px;
-
 z-index:9999;
 }
 
@@ -46,16 +42,13 @@ color:white;
 cursor:pointer;
 }
 
-
 /* MUSIC */
-
 .music-btn{
 position:fixed;
 top:15px;
 right:15px;
 z-index:1000;
 }
-
 .music-btn button{
 padding:8px 15px;
 border:none;
@@ -65,9 +58,7 @@ color:white;
 cursor:pointer;
 }
 
-
 /* SLIDER */
-
 .container{
 width:100vw;
 height:100vh;
@@ -84,20 +75,16 @@ transition:0.8s ease;
 .slide{
 width:100vw;
 height:100vh;
-
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-
 text-align:center;
 color:white;
 padding:30px;
 }
 
-
 /* COLORS */
-
 .one{background:linear-gradient(#ff9a9e,#fad0c4);}
 .two{background:linear-gradient(#a18cd1,#fbc2eb);}
 .three{background:linear-gradient(#fbc2eb,#a6c1ee);}
@@ -106,27 +93,21 @@ padding:30px;
 .countdown{background:linear-gradient(#667db6,#0082c8);}
 .gallery{background:linear-gradient(#fc5c7d,#6a82fb);}
 
-
 /* COUNTDOWN */
-
 #countdown{
 font-size:28px;
 margin:15px 0;
 }
-
 .date-info{
 font-size:14px;
 opacity:0.8;
 }
 
-
 /* GALLERY */
-
 .gallery-box{
 display:flex;
 gap:15px;
 }
-
 .gallery-box img{
 width:180px;
 height:220px;
@@ -135,32 +116,27 @@ border-radius:15px;
 box-shadow:0 0 15px rgba(0,0,0,0.4);
 }
 
-
 /* POPUP */
-
 .popup{
 position:fixed;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.9);
-
 display:none;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-
 color:white;
 z-index:99999;
 }
-
 .popup textarea{
 width:250px;
 height:120px;
 border-radius:10px;
 padding:10px;
 border:none;
+font-family:Poppins,sans-serif;
 }
-
 .popup button{
 margin-top:15px;
 padding:10px 25px;
@@ -169,4 +145,33 @@ border-radius:20px;
 background:#ff4d6d;
 color:white;
 cursor:pointer;
+}
+
+/* NO BUTTON ESCAPE */
+#noBtn{
+position:absolute;
+transition:0.3s ease;
+}
+
+/* PETALS */
+.petal{
+position:fixed;
+top:-20px;
+width:20px;
+height:20px;
+background:radial-gradient(circle at 30% 30%, #ff9a9e, #ff4d6d);
+border-radius:60% 40% 60% 40%;
+opacity:0.9;
+pointer-events:none;
+animation: fallPetal linear forwards;
+z-index:999;
+}
+
+@keyframes fallPetal{
+0%{
+ transform: translateY(0) rotate(0deg);
+}
+100%{
+ transform: translateY(110vh) rotate(360deg);
+}
 }
