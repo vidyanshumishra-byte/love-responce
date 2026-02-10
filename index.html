@@ -1,105 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Just Something For You</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- OTP SCREEN -->
-<div id="lockScreen" class="lock-screen">
-  <h2>🔐 Private Access</h2>
-  <input type="text" id="otpInput" placeholder="Enter OTP">
-  <button onclick="checkOTP()">Unlock</button>
-  <p id="otpError"></p>
-  <button onclick="generateOTP()">Send OTP</button>
-  <p id="otpInfo"></p>
-</div>
-
-<!-- MAIN SITE -->
-<div id="mainSite">
-<audio id="bgMusic" loop>
-  <source src="GehraHua.mp3" type="audio/mpeg">
-</audio>
-
-<div class="music-btn">
-  <button onclick="toggleMusic()">🎵 Play / Pause</button>
-</div>
+<audio id="bgMusic" src="music.mp3" loop></audio>
 
 <div class="container">
-<div class="slider" id="slider">
 
-<!-- SLIDE 1 -->
-<section class="slide one">
-<h1>Hey My LOVE ❤️</h1>
-<p>Swipe →</p>
-</section>
+  <!-- PAGE 1 -->
+  <div class="page active">
+    <h1>Something for you 🎁</h1>
+    <button onclick="nextPage()">Open</button>
+  </div>
 
-<!-- SLIDE 2 -->
-<section class="slide two">
-<h2>Something Honest 💕</h2>
-<p>
-You came into my life silently<br>
-I think I have fallen for you deeply<br>
-And I just want to be with you always.
-</p>
-</section>
+  <!-- PAGE 2 -->
+  <div class="page">
+    <h2>Can I ask you one small thing?</h2>
+    <button onclick="nextPage()">Yes 🙂</button>
+    <button class="no" onmouseover="moveButton(this)">No 😄</button>
+  </div>
 
-<!-- SLIDE 3 -->
-<section class="slide three">
-<h2>Why You?</h2>
-<p>
-Because your smile feels like home<br>
-You make me better every day.
-</p>
-</section>
+  <!-- PAGE 3 -->
+  <div class="page">
+    <h2>Do you feel comfortable talking to me?</h2>
+    <button onclick="nextPage()">Yes</button>
+    <button onclick="nextPage()">Maybe</button>
+  </div>
 
-<!-- SLIDE 4 -->
-<section class="slide four">
-<h2>My Feelings</h2>
-<p>
-Pure.<br>True.<br>Respectful.
-</p>
-</section>
+  <!-- PAGE 4 -->
+  <div class="page">
+    <h2>Do you like moments like this?</h2>
+    <button onclick="startMusic(); nextPage()">Yes 🌸</button>
+    <button onclick="startMusic(); nextPage()">They’re nice</button>
+  </div>
 
-<!-- SLIDE 5 : COUNTDOWN -->
-<section class="slide countdown">
-<h2>Since I Met You ❤️</h2>
-<p id="countdown"></p>
-<p class="date-info">Date: DD-MM-YYYY</p>
-</section>
+  <!-- PAGE 5 -->
+  <div class="page">
+    <h2>Do you think we understand each other a little?</h2>
+    <button onclick="nextPage()">Yes</button>
+    <button onclick="nextPage()">I think so</button>
+  </div>
 
-<!-- SLIDE 6 : GALLERY -->
-<section class="slide gallery">
-<h2>Our Memories 💖</h2>
-<div class="gallery-box">
-<img src="New folder (2)/images/pic1.jpg">
+  <!-- PAGE 6 (FEELINGS) -->
+  <div class="page">
+    <video src="video.mp4" autoplay muted loop></video>
+    <p class="feelings">
+      I enjoy talking to you.<br>
+      You make things feel lighter.<br><br>
+      You don’t have to respond to this.<br>
+      I just wanted you to know.
+    </p>
+    <button onclick="nextPage()">Continue</button>
+  </div>
 
-</div>
-</section>
+  <!-- PAGE 7 FINAL -->
+  <div class="page">
+    <h2>Would you like to give us a chance?</h2>
+    <button onclick="finalYes()">Yes ❤️</button>
+    <button onclick="finalTime()">I need time</button>
+    <p id="response"></p>
+  </div>
 
-<!-- SLIDE 7 -->
-<section class="slide five">
-<h2>One Question 💫</h2>
-<button onclick="openPopup('YES')">Yes 🌸</button>
-<button id="noBtn">No 🙂</button>
-</section>
-
-</div>
-</div>
-</div>
-
-<!-- MESSAGE POPUP -->
-<div id="popup" class="popup">
-<h3>Your Message 💌</h3>
-<textarea id="userMsg" placeholder="Write something..."></textarea>
-<button onclick="sendResponse()">Send ❤️</button>
 </div>
 
 <script src="script.js"></script>
